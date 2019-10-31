@@ -1,0 +1,39 @@
+/***********************************/
+/**** TOP POSTS ********************/
+/***********************************/
+
+main section.top-posts > article.main-post {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+main section.top-posts article.top-post > a.category-link {
+    color: #DC3543;
+    font-weight: bold;
+}
+
+main section.top-posts article.top-post > a.category-link::after {
+    content: "";
+    display: block;
+
+    width: 100%;
+    height: 2px;
+    margin-bottom: 10px;
+
+    background-color: #DC3543;
+}
+
+main section.top-posts article.top-post > a.category-link:hover {
+    text-decoration: none;
+}
+
+main section.top-posts > article.main-post img {
+    float: left;
+    width: 400px;
+    margin: 0 auto;
+}
+
+main section.top-posts > .posts .col-3 {
+    margin: 0 16px;
+}

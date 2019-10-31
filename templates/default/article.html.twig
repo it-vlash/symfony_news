@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ asset('css/article.css') }}">
+{% endblock %}
+
+{% block body %}
+    <section class="article-post">
+        {% for article in articles %}
+            <article class="post">
+                <p>Article category: <b><a href="/category/{{ article.category }}" class="category-link">{{ article.category }}</a></b></p>
+                <h4>{{ article.title }}</h4>
+                <img src="{{ article.image }}" alt="article.image" class="img-fluid">
+                <p>{{ article.content }}</p>
+                <time>{{ article.publishedAt | date('d-m-Y H:i:s') }}</time>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
